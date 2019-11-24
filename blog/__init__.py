@@ -1,11 +1,9 @@
-# blog/__init__.py
-# holds organisational logic, connecting the blueprints, connecting the logging manager
-
 from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'mysecret'
