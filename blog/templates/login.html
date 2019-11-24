@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form class='box' method="POST" style="
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;">
+        {{ form.hidden_tag() }}
+        <div align="center" style="color: white">
+            {{ form.email.label }}:
+        </div>
+        <div align="center" class="form-group">
+            {{ form.email(class_="oval") }}
+        </div>
+        <div>
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div align="center" style="color: white">
+            {{ form.password.label }}:
+        </div>
+        <div align="center" class="form-group">
+            {{ form.password(class_="oval") }}
+        </div>
+        <div>
+            <small class="form-text text-muted">Your password must be 8-20 characters long!</small>
+        </div>
+        <div style="border: 0; padding: 14px 40px; cursor: pointer">
+            {{ form.submit }}
+        </div>
+    </form>
+{% endblock %}
